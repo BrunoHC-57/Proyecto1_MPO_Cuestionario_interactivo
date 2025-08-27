@@ -1,12 +1,24 @@
 
-# --- introduccion ---
-print("-----------------------------")
-print("\n=== Bienbenido a mi cuestionario interactivo ===\n")
-print("Las preguntas seran tipo test de -a-, -b-, -c-, y  -d- y estas letras son las que tendras que escribir como respuesta dependiendo cual creas que es la correcta.")
-print("Selecciona una de las siguientes opcione spara continuar escribiendo 1 o 2")
-print()
-
-input("Si estas listo presiona Enter para continuar...")
+def inicio():
+    # --- Inicio ---
+    while True:
+        print("-----------------------------")
+        print("\n=== Bienbenido a mi cuestionario interactivo ===\n")
+        print(
+            "Las preguntas seran tipo test de -a-, -b-, -c-, y  -d- y estas letras son las que tendras que escribir como respuesta dependiendo cual creas que es la correcta.")
+        print("Selecciona una de las siguientes opcione spara continuar escribiendo 1 o 2")
+        print("1.-Iniciar cuestionario")
+        print("2.-Salir")
+        while True:
+            respuesta = float(input("Introduce tu respuesta:"))
+            if respuesta in [1, 2]:
+                break
+            else:
+                print("Respuesta invalida responde con 1 o 2")
+        if respuesta == 1:
+            cuestionario()
+        else:
+            exit()
 
 def cuestionario():
     # --- 1ºPregunta ---
@@ -114,5 +126,26 @@ def cuestionario():
         puntos = puntos + 1
     else:
         print("Error :´(")
+    #-- Puntuacion final --
+    print("================================================")
+    if puntos == 5:
+        print("Enhorabuea has conseguido la puntuacion paxima!!!")
+        print("Puntos: ", puntos)
+    elif puntos == 4:
+        print("Enhorabuea has sacado casi la puntuacion maxima")
+        print("Puntos: ", puntos)
+    elif puntos == 3:
+        print("Enhorabuea has aprobado")
+        print("Puntos: ", puntos)
+    elif puntos == 2:
+        print("Toca estudiar mas para la proxima has suspendido")
+        print("Puntos: ", puntos)
+    elif puntos == 1:
+        print("Almenos una... Estudia para la proxima...")
+        print("Puntos: ", puntos)
+    else :
+        print("Ni la capital de España...")
+        print("Puntos: ", puntos)
+    input("Presiona Enter para continuar al inicio...")
 
-cuestionario()
+inicio()
