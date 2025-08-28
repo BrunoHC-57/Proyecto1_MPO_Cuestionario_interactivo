@@ -31,10 +31,12 @@ def cuestionario():
     print("-----------------------------")
     letras = ["a", "b", "c", "d"]
     puntos = 0
+    preguntotal = 0
     solucion1 = "d"
     while True:
         respuesta = input("Escribe tu respuesta:").lower()
         if respuesta in letras:
+            preguntotal = preguntotal + 1
             break
         else:
             print("Respuesta invalida responde con a, b, c o d")
@@ -56,6 +58,7 @@ def cuestionario():
     while True:
         respuesta = input("Escribe tu respuesta:").lower()
         if respuesta in letras:
+            preguntotal = preguntotal + 1
             break
         else:
             print("Respuesta invalida responde con a, b, c o d")
@@ -77,6 +80,7 @@ def cuestionario():
     while True:
         respuesta = input("Escribe tu respuesta:").lower()
         if respuesta in letras:
+            preguntotal = preguntotal + 1
             break
         else:
             print("Respuesta invalida responde con a, b, c o d")
@@ -97,6 +101,7 @@ def cuestionario():
     while True:
         respuesta = input("Escribe tu respuesta:").lower()
         if respuesta in letras:
+            preguntotal = preguntotal + 1
             break
         else:
             print("Respuesta invalida responde con a, b, c o d")
@@ -118,6 +123,7 @@ def cuestionario():
     while True:
         respuesta = input("Escribe tu respuesta:").lower()
         if respuesta in letras:
+            preguntotal = preguntotal + 1
             break
         else:
             print("Respuesta invalida responde con a, b, c o d")
@@ -130,22 +136,22 @@ def cuestionario():
     print("================================================")
     if puntos == 5:
         print("Enhorabuea has conseguido la puntuacion paxima!!!")
-        print("Puntos: ", puntos)
+        print("Puntos: ", puntos, "/", preguntotal, "(", puntos / preguntotal * 100, "% )")
     elif puntos == 4:
         print("Enhorabuea has sacado casi la puntuacion maxima")
-        print("Puntos: ", puntos)
+        print("Puntos: ", puntos, "/", preguntotal, "(", puntos / preguntotal * 100, "% )")
     elif puntos == 3:
         print("Enhorabuea has aprobado")
-        print("Puntos: ", puntos)
+        print("Puntos: ", puntos, "/", preguntotal, "(", puntos / preguntotal * 100, "% )")
     elif puntos == 2:
         print("Toca estudiar mas para la proxima has suspendido")
-        print("Puntos: ", puntos)
+        print("Puntos: ", puntos, "/", preguntotal, "(", puntos / preguntotal * 100, "% )")
     elif puntos == 1:
         print("Almenos una... Estudia para la proxima...")
-        print("Puntos: ", puntos)
+        print("Puntos: ", puntos, "/", preguntotal, "(", puntos / preguntotal * 100, "% )")
     else :
         print("Ni la capital de España...")
-        print("Puntos: ", puntos)
+        print("Puntos: ", puntos, "/", preguntotal, "(", puntos / preguntotal * 100, "% )")
     input("Presiona Enter para continuar al inicio...")
 
 inicio()
